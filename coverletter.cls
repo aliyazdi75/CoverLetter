@@ -10,7 +10,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 
-\ProvidesClass{simpleresumecv}[2016/12/25 Simple Resume CV https://github.com/zachscrivena/simple-resume-cv]
+\ProvidesClass{coverletter}[2020/10/25 Cover Letter https://github.com/aliyazdi75/CoverLetter]
 
 \DeclareOption{a4paper}{\PassOptionsToClass{\CurrentOption}{article}}
 \DeclareOption{letterpaper}{\PassOptionsToClass{\CurrentOption}{article}}
