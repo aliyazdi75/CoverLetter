@@ -163,5 +163,20 @@ BoldItalicFont=FreeSerifBoldItalic]
 
 \newcommand{\signature}[1]{\raggedright\UseDetailFont\selectfont {#1 \\} \normalfont}
 
+% Macro: SubBulletItem.
+\newsavebox{\SubBulletItemIndentBox}
+\newlength{\SubBulletItemIndentWidth}
+%
+\newcommand{\SubBulletItem}
+{\par\vspace{0\baselineskip}%
+\savebox{\SubBulletItemIndentBox}{\SubBulletSymbol\hspace{1.5mm}}%
+\settowidth{\SubBulletItemIndentWidth}{\usebox{\SubBulletItemIndentBox}}%
+\parshape 2%
+\labelwidth \linewidth%
+\dimexpr\labelwidth+\SubBulletItemIndentWidth\relax \dimexpr\linewidth-\SubBulletItemIndentWidth\relax%
+\usebox{\SubBulletItemIndentBox}%
+\ignorespaces%
+}
+
 % End of class file.
 \endinput
